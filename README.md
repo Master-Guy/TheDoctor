@@ -1,3 +1,20 @@
+<style type="text/css">
+    table {
+        width: 100%;
+    }
+    table th:first-of-type {
+        min-width: 100px;
+        width: 10%;
+    }
+    table th:nth-of-type(2) {
+        min-width: 100px;
+        width: 10%;
+    }
+    table th:nth-of-type(3) {
+        width: 100%;
+    }
+</style>
+
 # TheDoctor
 
 TheDoctor is in it's third iteration, now using DiscordJS v14 and build with slash commands.
@@ -91,20 +108,3 @@ Will have the bot respond with `Test OK!`
 Currently planned features are listed here, but feel free to suggest more.
 
 -   GitHub.com repository messages to report new or updated Pull Requests, Issues and Releases
-
-<style>
-    table {
-        width: 100%;
-    }
-    table th:first-of-type {
-        min-width: 100px;
-        width: 10%;
-    }
-    table th:nth-of-type(2) {
-        min-width: 100px;
-        width: 10%;
-    }
-    table th:nth-of-type(3) {
-        width: 100%;
-    }
-</style>
