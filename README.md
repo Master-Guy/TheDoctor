@@ -35,7 +35,7 @@ At this moment the bot already has the following functionalities available to us
 | `/senddm` | `Manage Messages`  | 1: The `@user` to send the message to<br />2: The `color` of the embed showing the message<br />3: The `message` actual message to show to the user |
 
 `/senddm @randomuser Blue Thank you for helping us today!`<br />Will send a message to `@randomuser` showing as followed:<br />
-![Example message](https://www.github.com/Master-Guy/TheDiscord/blob/main/senddm_example.png?raw=true)
+![Example senddm](https://github.com/Master-Guy/TheDoctor/raw/main/senddm_example.png)
 
 <br /><hr /><br />
 
@@ -46,7 +46,7 @@ At this moment the bot already has the following functionalities available to us
 | `/messages add` | `Manage Messages`  | 1: The `amount` of messages to send to the current channel |
 
 `/messages add 5`<br />Will send 5 messages to the current channel.
-![Example message](https://www.github.com/Master-Guy/TheDiscord/blob/main/messagesadd_example.png?raw=true)
+![Example messages add 5](https://github.com/Master-Guy/TheDoctor/raw/main/messagesadd_example.png)
 
 <br /><hr /><br />
 
