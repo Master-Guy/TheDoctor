@@ -14,41 +14,97 @@ At this moment the bot already has the following functionalities available to us
 -   Removing a number of messages by a specific user
 -   Ping/Test to see if the bot is working properly
 
+<br /><hr /><br />
+
 ### Mass-assigning or revoking roles
 
-| Command                                        | Privilege required | Description                                         | Parameters                                                                                                                                              | Example                                                                                                                                                                                                                     |
-| ---------------------------------------------- | ------------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/roles mass assign`<br />`/roles mass revoke` | `Manage Roles`     | Mass-assigns or mass-revokes roles to or from users | 1: The `@role` to be assigned or revoked<br />2: `True` or `False` to indicate if the bot should only<br /> go through the users in the current channel | `/roles mass assign @visitors False`<br />Will assign the `@visitors` role to all users in the server<hr />`/roles mass revoke @gamenight True`<br />Revoke the `@gamenight` role from all the users in the current channel |
+| Command                                        | Privilege required | Parameters                                                                                                                                              |
+| ---------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/roles mass assign`<br />`/roles mass revoke` | `Manage Roles`     | 1: The `@role` to be assigned or revoked<br />2: `True` or `False` to indicate if the bot should only<br /> go through the users in the current channel |
 
--   Roles
-    -   Command: `/roles mass assign` or `/roles mass revoke`
-    -   Parameter 1: The `@role` to be assigned or revoked
-    -   Parameter 2: `True` if the bot should only go through the users in the current channel, or `False` if the bot should go through all users in the server
-    -   Privilege required: `Manage Roles`
--   Sending DMs to users by the bot
-    -   Command: `/senddm`
-    -   Parameter 1: The `@user` to send the message to
-    -   Parameter 2: The `color` of the embed showing the message
-    -   Parameter 3: The `message` actual message to show to the user
-    -   Privilege required: `Manage Messages`
--   Adding a number of messages to a channel
-    -   Command: `/messages add`
-    -   Parameter 1: The `amount` of messages to send to the current channel
-    -   Privilege required: `Manage Messages`
--   Removing a number of messages from a channel
-    -   Command: /messages remove
-    -   Requires the `Manage Messages` privilege
--   Removing a number of messages by a specific user from either a single channel, or from all channels in the server
-    -   Command: /messages remove_by
-    -   Requires the `Manage Messages` privilege
--   And of course Ping/Test to see if the bot is working properly
-    -   Commands: /ping and /test
-    -   Available for everyone, without permissions
+`/roles mass assign @visitors False`<br />Will assign the `@visitors` role to all users in the server.
 
-## Future features
+`/roles mass revoke @gamenight True`<br />Revoke the `@gamenight` role from all the users in the current channel.
+
+<br /><hr /><br />
+
+### Sending DMs to users by the bot
+
+| Command   | Privilege required | Parameters                                                                                                                                          |
+| --------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/senddm` | `Manage Messages`  | 1: The `@user` to send the message to<br />2: The `color` of the embed showing the message<br />3: The `message` actual message to show to the user |
+
+`/senddm @randomuser Blue Thank you for helping us today!`<br />Will send a message to `@randomuser` showing as followed:<br />
+![Example message](https://www.github.com/Master-Guy/TheDiscord/blob/main/senddm_example.png?raw=true)
+
+<br /><hr /><br />
+
+### Adding a number of messages to a channel
+
+| Command         | Privilege required | Parameters                                                 |
+| --------------- | ------------------ | ---------------------------------------------------------- |
+| `/messages add` | `Manage Messages`  | 1: The `amount` of messages to send to the current channel |
+
+`/messages add 5`<br />Will send 5 messages to the current channel.
+![Example message](https://www.github.com/Master-Guy/TheDiscord/blob/main/messagesadd_example.png?raw=true)
+
+<br /><hr /><br />
+
+### Removing a number of messages from a channel
+
+| Command            | Privilege required | Parameters                                                     |
+| ------------------ | ------------------ | -------------------------------------------------------------- |
+| `/messages remove` | `Manage Messages`  | 1: The `amount` of messages to remove from the current channel |
+
+`/messages remove 5`<br />Will remove 5 messages from the current channel, starting with the latest.
+
+<br /><hr /><br />
+
+### Removing a number of messages by a specific user
+
+| Command               | Privilege required | Parameters                                                                                                                                                    |
+| --------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/messages remove_by` | `Manage Messages`  | 1: The `@user` who's messages to remove<br />2: The `amount` of messages to remove <br />3: `True` or `False` indicating to remove messages from all channels |
+
+`/messages remove_by @naughtyuser 5 False`<br />Will remove the last 5 messages made by `@naughtyuser` in the current channel.
+
+`/messages remove_by @banneduser 5 True`<br />Will remove the last 5 messages made by `@banneduser` in each channel of this server.
+
+<br /><hr /><br />
+
+### Ping/Test to see if the bot is working properly
+
+| Command              | Privilege required | Parameters |
+| -------------------- | ------------------ | ---------- |
+| `/ping`<br />`/test` | N/A                | N/A        |
+
+`/ping`<br />
+Will have the bot respond with `Pong!`
+
+`/test`<br />
+Will have the bot respond with `Test OK!`
+
+<br /><hr /><br />
+
+## Planned and requested features
 
 Currently planned features are listed here, but feel free to suggest more.
 
--   GitHub.com repository messages
-    -   Command: /github
-    -   Requires the `Manage webhooks` privilege
+-   GitHub.com repository messages to report new or updated Pull Requests, Issues and Releases
+
+<style>
+    table {
+        width: 100%;
+    }
+    table th:first-of-type {
+        min-width: 100px;
+        width: 10%;
+    }
+    table th:nth-of-type(2) {
+        min-width: 100px;
+        width: 10%;
+    }
+    table th:nth-of-type(3) {
+        width: 100%;
+    }
+</style>
