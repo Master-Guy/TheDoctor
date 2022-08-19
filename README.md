@@ -11,17 +11,17 @@ At this moment the bot already has the following functionalities available to us
 
 - [TheDoctor](#thedoctor)
   - [Current features](#current-features)
-    - [[Mass-assigning or revoking roles]](#mass-assigning-or-revoking-roles)
-    - [[Sending DMs to users by the bot]](#sending-dms-to-users-by-the-bot)
-    - [[Adding a number of messages to a channel]](#adding-a-number-of-messages-to-a-channel)
-    - [[Removing a number of messages from a channel]](#removing-a-number-of-messages-from-a-channel)
-    - [[Removing a number of messages by a specific user]](#removing-a-number-of-messages-by-a-specific-user)
-    - [[Ping/Test to see if the bot is working properly]](#pingtest-to-see-if-the-bot-is-working-properly)
-  - [[Planned and requested features]](#planned-and-requested-features)
+    - [Mass-assigning or revoking roles](#mass-assigning-or-revoking-roles)
+    - [Sending DMs to users by the bot](#sending-dms-to-users-by-the-bot)
+    - [Adding a number of messages to a channel](#adding-a-number-of-messages-to-a-channel)
+    - [Removing a number of messages from a channel](#removing-a-number-of-messages-from-a-channel)
+    - [Removing a number of messages by a specific user](#removing-a-number-of-messages-by-a-specific-user)
+    - [Ping/Test to see if the bot is working properly](#pingtest-to-see-if-the-bot-is-working-properly)
+  - [Planned and requested features](#planned-and-requested-features)
 
 <br /><hr /><br />
 
-### [Mass-assigning or revoking roles]
+### Mass-assigning or revoking roles
 
 | Command                                        | Privilege required | Parameters                                                                                                                                              |
 | ---------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,7 +33,7 @@ At this moment the bot already has the following functionalities available to us
 
 <br /><hr /><br />
 
-### [Sending DMs to users by the bot]
+### Sending DMs to users by the bot
 
 | Command   | Privilege required | Parameters                                                                                                                                          |
 | --------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ At this moment the bot already has the following functionalities available to us
 
 <br /><hr /><br />
 
-### [Adding a number of messages to a channel]
+### Adding a number of messages to a channel
 
 | Command         | Privilege required | Parameters                                                 |
 | --------------- | ------------------ | ---------------------------------------------------------- |
@@ -55,7 +55,7 @@ At this moment the bot already has the following functionalities available to us
 
 <br /><hr /><br />
 
-### [Removing a number of messages from a channel]
+### Removing a number of messages from a channel
 
 | Command            | Privilege required | Parameters                                                     |
 | ------------------ | ------------------ | -------------------------------------------------------------- |
@@ -65,7 +65,7 @@ At this moment the bot already has the following functionalities available to us
 
 <br /><hr /><br />
 
-### [Removing a number of messages by a specific user]
+### Removing a number of messages by a specific user
 
 | Command               | Privilege required | Parameters                                                                                                                                                    |
 | --------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ At this moment the bot already has the following functionalities available to us
 
 <br /><hr /><br />
 
-### [Ping/Test to see if the bot is working properly]
+### Ping/Test to see if the bot is working properly
 
 | Command              | Privilege required       | Parameters   |
 | -------------------- | ------------------------ | ------------ |
@@ -91,7 +91,7 @@ Will have the bot respond with `Test OK!`
 
 <br /><hr /><br />
 
-## [Planned and requested features]
+## Planned and requested features
 
 Currently planned features are listed here, but feel free to suggest more.
 
