@@ -74,9 +74,9 @@ At this moment the bot already has the following functionalities available to us
 
 ### Ping/Test to see if the bot is working properly
 
-| Command              | Privilege required | Parameters |
-| -------------------- | ------------------ | ---------- |
-| `/ping`<br />`/test` | N/A                | N/A        |
+| Command              | Privilege required     | Parameters   |
+| -------------------- | ---------------------- | ------------ |
+| `/ping`<br />`/test` | N/A<br />Administrator | N/A<br />N/A |
 
 `/ping`<br />
 Will have the bot respond with `Pong!`
