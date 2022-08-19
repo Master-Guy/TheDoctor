@@ -3,7 +3,8 @@
 TheDoctor is in it's third iteration, now using DiscordJS v14 and build with slash commands.
 This bot is hosted by me myself, but available to anyone that wants to use it's features.
 
-[Click here to invite me to your server](https://discord.com/oauth2/authorize?client_id=1010203035261210724&permissions=277293903062&scope=applications.commands%20bot)
+[Click here to invite me to your server.](https://discord.com/oauth2/authorize?client_id=1010203035261210724&permissions=277293903062&scope=applications.commands%20bot)
+
 If you found any issues with the bot, please let me know by opening a [bug report](https://github.com/Master-Guy/TheDoctor/issues/new?labels=bug). Need more [documentation](https://github.com/Master-Guy/TheDoctor/issues/new?labels=documentation)? Or got a [suggestion](https://github.com/Master-Guy/TheDoctor/issues/new?labels=enhancement)? Please don't hesitate to ask and let me know!
 
 ## Current features
