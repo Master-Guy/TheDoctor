@@ -17,6 +17,10 @@
 			function openInvite() {
 				console.log(document.getElementById("btnInvite").dataset.url);
 			}
+
+			window.onload = function() {
+				calculatePermissions();
+			}
 		</script>
 		<style type="text/css">
 			html, body, input, textarea, select, button, dialog {
@@ -97,7 +101,7 @@
 				<input type="checkbox" name="embedlinks" value="16384" id="embedlinks" onclick="calculatePermissions();" checked /><label for="embedlinks"><b>Embed Links</b></label>, allows for clickable items in the response of for example the <code>/help</code> command.<br />
 			</form>
 		</p>
-		<p><input type="button" value="Invite me! ()" /></p><br />
+		<p><input type="button" value="Invite me! ()" id="btnInvite" /></p><br />
 		<p><a href="https://discord.com/oauth2/authorize?client_id=1010203035261210724&amp;permissions=277293903062&amp;scope=applications.commands%20bot">Click here to invite me to your server.</a></p><br />
 		<hr>
 		<br /><p>If you found any issues with the bot, please let me know by opening a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=bug">bug report</a>. Need more <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=documentation">documentation</a>? Or got a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=enhancement">suggestion</a>? Please don&#39;t hesitate to ask and let me know!</p><br />
