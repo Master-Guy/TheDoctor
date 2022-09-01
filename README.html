@@ -29,6 +29,7 @@
 			table, tr, th, thead, td {
 				border: 1px solid rgb(140, 130, 115);
 				border-collapse: collapse;
+				padding: 2px;
 			}
 
 			ul, li {
@@ -55,19 +56,30 @@
 				</ul>
 				Enable the checkmarks for the commands you want to use, to get an invite link that doesn&quot;t request more permissions than required.<br />
 				<br />
-				<input type="checkbox" name="manageroles" value="" id="manageroles" /><label for="manageroles"><b>Manage Roles</b></label>
+				<input type="checkbox" name="manageroles" value="268435456" id="manageroles" /><label for="manageroles"><b>Manage Roles</b></label>
 				<ul>
 					<li><code>/roles</code> (<a href="#mass-assigning-or-revoking-roles">#</a>)</li>
 				</ul>
-				<input type="checkbox" name="managemessages" value="" id="managemessages" /><label for="managemessages"><b>Manage Messages</b></label>
+				<input type="checkbox" name="managemessages" value="8192" id="managemessages" /><label for="managemessages"><b>Manage Messages</b></label>
 				<ul>
-					<li><code>/messages</code> (<a href="#adding-a-number-of-messages-to-a-channel">#</a>)</li>
+					<li><code>/messages</code> (<a href="#adding-a-number-of-messages-to-a-channel">#</a>) *Also requires <code>Read Message History</code>, <code>Send Messages</code> and <code>Send Messages in Threads</code> for certain features</li>
 					<li><code>/senddm</code> (<a href="#sending-dms-to-users-by-the-bot">#</a>)</li>
 				</ul>
 				Always available:
 				<ul>
 					<li><code>/ping</code> (<a href="#pingtest-to-see-if-the-bot-is-working-properly">#</a>)</li>
 				</ul>
+				Required permission:
+				<input type="checkbox" name="useslashcommands" value="2147483648" id="useslashcommands" checked readonly /><label for="useslashcommands"><b>Use Slash Commands</b>, required to create and react to slash commands.</label><br />
+				<br />
+				Generic permissions, to improve the bot usability:
+				<input type="checkbox" name="changenickname" value="67108864" id="changenickname" checked /><label for="changenickname"><b>Change Nickname</b>, allows the bot to change it&quot;s own nickname.</label><br />
+				<input type="checkbox" name="viewchannels" value="1024" id="viewchannels" checked /><label for="viewchannels"><b>View Channels</b>, allows the bot see all the channels.</label><br />
+				<input type="checkbox" name="readmessagehistory" value="65536" id="readmessagehistory" checked /><label for="readmessagehistory"><b>Read message history</b>, helps if the bot has to reboot or update.</label><br />
+				<input type="checkbox" name="viewthreads" value="1024" id="viewthreads" checked /><label for="viewthreads"><b>View Channels</b>, allows the bot see all the threads.</label><br />
+				<input type="checkbox" name="sendmessages" value="2048" id="sendmessages" /><label for="sendmessages"><b>Send Messages</b></label>, allows sending messages in text messages.<br />
+				<input type="checkbox" name="sendthread" value="274877906944" id="sendthread" /><label for="sendthread"><b>Send Messages in Threads</b></label>, allows sending messages in threads.<br />
+				<input type="checkbox" name="embedlinks" value="16384" id="embedlinks" /><label for="embedlinks"><b>Embed Links</b></label>, allows for clickable items in the response of for example the <code>/help</code> command.<br />
 			</form>
 		</p>
 		<p><a href="https://discord.com/oauth2/authorize?client_id=1010203035261210724&amp;permissions=277293903062&amp;scope=applications.commands%20bot">Click here to invite me to your server.</a></p><br />
