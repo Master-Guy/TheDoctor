@@ -10,6 +10,7 @@
 					console.dir(checkedbox);
 					permValue += parseInt(checkedbox.value);
 				});
+				document.getElementById("btnInvite").disabled = false;
 				document.getElementById("btnInvite").value = "Invite me! (" + permValue + ")";
 				document.getElementById("btnInvite").dataset.url = "https://discord.com/oauth2/authorize?client_id=1010203035261210724&permissions=" + permValue + "&scope=applications.commands%20bot";
 			}
@@ -101,7 +102,7 @@
 				<input type="checkbox" name="embedlinks" value="16384" id="embedlinks" onclick="calculatePermissions();" checked /><label for="embedlinks"><b>Embed Links</b></label>, allows for clickable items in the response of for example the <code>/help</code> command.<br />
 			</form>
 		</p>
-		<p><input type="button" value="Invite me! ()" id="btnInvite" onclick="openInvite();" /></p><br />
+		<p><input type="button" disabled value="One moment..." id="btnInvite" onclick="openInvite();" /></p><br />
 		<hr>
 		<br /><p>If you found any issues with the bot, please let me know by opening a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=bug">bug report</a>. Need more <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=documentation">documentation</a>? Or got a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=enhancement">suggestion</a>? Please don&#39;t hesitate to ask and let me know!</p><br />
 		<hr>
