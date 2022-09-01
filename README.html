@@ -5,9 +5,9 @@
 			function calculatePermissions() {
 				let form = document.getElementById("permissionsform");
 				let checks = form.querySelectorAll('input[type=checkbox]:checked');
-				foreach(checkedbox in checks) {
+				checks.forEach((checkedbox) => {
 					console.dir(checkedbox);
-				}
+				});
 			}
 		</script>
 		<style type="text/css">
