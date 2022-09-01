@@ -11,7 +11,7 @@
 					permValue += parseInt(checkedbox.value);
 				});
 				document.getElementById("btnInvite").value = "Invite me! (" + permValue + ")";
-				document.getElementById("btnInvite").dataset.url = "https://discord.com/oauth2/authorize?client_id=1010203035261210724&amp;permissions=" + permValue + "&amp;scope=applications.commands%20bot";
+				document.getElementById("btnInvite").dataset.url = "https://discord.com/oauth2/authorize?client_id=1010203035261210724&permissions=" + permValue + "&scope=applications.commands%20bot";
 			}
 
 			function openInvite() {
@@ -76,11 +76,11 @@
 				</ul>
 				Enable the checkmarks for the commands you want to use, to get an invite link that doesn&quot;t request more permissions than required.<br />
 				<br />
-				<input type="checkbox" name="manageroles" value="268435456" id="manageroles" onclick="calculatePermissions();" /><label for="manageroles"><b>Manage Roles</b></label>
+				<input type="checkbox" name="manageroles" value="268435456" id="manageroles" onclick="calculatePermissions();" checked /><label for="manageroles"><b>Manage Roles</b></label>
 				<ul>
 					<li><code>/roles</code> (<a href="#mass-assigning-or-revoking-roles">#</a>)</li>
 				</ul>
-				<input type="checkbox" name="managemessages" value="8192" id="managemessages" onclick="calculatePermissions();" /><label for="managemessages"><b>Manage Messages</b></label>
+				<input type="checkbox" name="managemessages" value="8192" id="managemessages" onclick="calculatePermissions();" checked /><label for="managemessages"><b>Manage Messages</b></label>
 				<ul>
 					<li><code>/messages</code> (<a href="#adding-a-number-of-messages-to-a-channel">#</a>) *Also requires <code>Read Message History</code>, <code>Send Messages</code> and <code>Send Messages in Threads</code> for certain features</li>
 					<li><code>/senddm</code> (<a href="#sending-dms-to-users-by-the-bot">#</a>)</li>
