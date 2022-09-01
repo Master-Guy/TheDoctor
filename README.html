@@ -1,0 +1,279 @@
+<html>
+	<head>
+		<title>TheDoctor ReadMe</title>
+		<script type="text/javascript">
+			function calculatePermissions() {
+				let form = document.getElementById("permissionsform");
+				let checks = form.querySelectorAll('input[type=checkbox]:checked');
+				let permValue = 0;
+				checks.forEach((checkedbox) => {
+					console.dir(checkedbox);
+					permValue += parseInt(checkedbox.value);
+				});
+				document.getElementById("btnInvite").disabled = false;
+				document.getElementById("btnInvite").value = "Invite me! (" + permValue + ")";
+				document.getElementById("btnInvite").dataset.url = "https://discord.com/oauth2/authorize?client_id=1010203035261210724&permissions=" + permValue + "&scope=applications.commands%20bot";
+			}
+
+			function openInvite() {
+				window.open(document.getElementById("btnInvite").dataset.url, '_blank').focus();
+			}
+
+			window.onload = function() {
+				calculatePermissions();
+			}
+		</script>
+		<style type="text/css">
+			html, body, input, textarea, select, button, dialog {
+				background-color: #181a1b;
+				border-color: #736b5e;
+				color: #e8e6e3;
+			}
+
+			::-webkit-scrollbar {
+				background-color: #202324;
+				color: #aba499;
+			}
+
+			::-webkit-scrollbar-thumb {
+				background-color: #454a4d;
+			}
+
+			::-webkit-scrollbar-corner {
+				background-color: #181a1b;
+			}
+
+			table, tr, th, thead, td {
+				border: 1px solid rgb(140, 130, 115);
+				border-collapse: collapse;
+				padding: 2px;
+			}
+
+			ul, li {
+				margin-top: 0px;
+			}
+
+			a {
+				color: #3391ff;
+			}
+
+			input[type="checkbox"] {
+				accent-color: #004daa;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="thedoctor">TheDoctor</h1>
+		<p>TheDoctor is in it&#39;s third iteration, now using DiscordJS v14 and build with slash commands.
+			This bot is hosted by me myself, but available to anyone that wants to use it&#39;s features for free.
+		</p><br />
+		<hr>
+		<h2 id="permissions">Create invite link</h2>
+		<p>
+			<form id="permissionsform">
+				To see what commands you can use in your server:
+				<ul>
+					<li><code>/help</code></li>
+				</ul>
+				Enable the checkmarks for the commands you want to use, to get an invite link that doesn&quot;t request more permissions than required.<br />
+				<br />
+				<input type="checkbox" name="manageroles" value="268435456" id="manageroles" onclick="calculatePermissions();" checked /><label for="manageroles"><b>Manage Roles</b></label>
+				<ul>
+					<li><code>/roles</code> (<a href="#mass-assigning-or-revoking-roles">#</a>)</li>
+				</ul>
+				<input type="checkbox" name="managemessages" value="8192" id="managemessages" onclick="calculatePermissions();" checked /><label for="managemessages"><b>Manage Messages</b></label>
+				<ul>
+					<li><code>/messages</code> (<a href="#adding-a-number-of-messages-to-a-channel">#</a>) *Also requires <code>Read Message History</code>, <code>Send Messages</code> and <code>Send Messages in Threads</code> for certain features</li>
+					<li><code>/senddm</code> (<a href="#sending-dms-to-users-by-the-bot">#</a>)</li>
+				</ul>
+				Always available:
+				<ul>
+					<li><code>/ping</code> (<a href="#pingtest-to-see-if-the-bot-is-working-properly">#</a>)</li>
+				</ul>
+				Required permission:<br />
+				<input type="checkbox" name="useslashcommands" value="2147483648" id="useslashcommands" checked onclick="return false;" /><label for="useslashcommands"><b>Use Slash Commands</b>, required to create and react to slash commands.</label><br />
+				<br />
+				Generic permissions, to improve the bot usability:<br />
+				<input type="checkbox" name="changenickname" value="67108864" id="changenickname" onclick="calculatePermissions();" checked /><label for="changenickname"><b>Change Nickname</b>, allows the bot to change it&quot;s own nickname.</label><br />
+				<input type="checkbox" name="viewchannels" value="1024" id="viewchannels" onclick="calculatePermissions();" checked /><label for="viewchannels"><b>View Channels</b>, allows the bot see all the channels.</label><br />
+				<input type="checkbox" name="readmessagehistory" value="65536" id="readmessagehistory" onclick="calculatePermissions();" checked /><label for="readmessagehistory"><b>Read message history</b>, helps if the bot has to reboot or update.</label><br />
+				<input type="checkbox" name="sendmessages" value="2048" id="sendmessages" onclick="calculatePermissions();" checked /><label for="sendmessages"><b>Send Messages</b></label>, allows sending messages in text messages.<br />
+				<input type="checkbox" name="sendthread" value="274877906944" id="sendthread" onclick="calculatePermissions();" checked /><label for="sendthread"><b>Send Messages in Threads</b></label>, allows sending messages in threads.<br />
+				<input type="checkbox" name="embedlinks" value="16384" id="embedlinks" onclick="calculatePermissions();" checked /><label for="embedlinks"><b>Embed Links</b></label>, allows for clickable items in the response of for example the <code>/help</code> command.<br />
+			</form>
+		</p>
+		<p><input type="button" disabled value="One moment..." id="btnInvite" onclick="openInvite();" /></p><br />
+		<hr>
+		<br /><p>If you found any issues with the bot, please let me know by opening a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=bug">bug report</a>. Need more <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=documentation">documentation</a>? Or got a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=enhancement">suggestion</a>? Please don&#39;t hesitate to ask and let me know!</p><br />
+		<hr>
+		<h2 id="current-features">Current features</h2>
+		<p>At this moment the bot already has the following functionalities available to use:</p>
+		<ul>
+			<li>
+				<a href="#thedoctor">TheDoctor</a>
+				<ul>
+					<li>
+						<a href="#current-features">Current features</a>
+						<ul>
+							<li><a href="#mass-assigning-or-revoking-roles">Mass-assigning or revoking roles</a></li>
+							<li><a href="#sending-dms-to-users-by-the-bot">Sending DMs to users by the bot</a></li>
+							<li><a href="#adding-a-number-of-messages-to-a-channel">Adding a number of messages to a channel</a></li>
+							<li><a href="#removing-a-number-of-messages-from-a-channel">Removing a number of messages from a channel</a></li>
+							<li><a href="#removing-a-number-of-messages-by-a-specific-user">Removing a number of messages by a specific user</a></li>
+							<li><a href="#pingtest-to-see-if-the-bot-is-working-properly">Ping/Test to see if the bot is working properly</a></li>
+						</ul>
+					</li>
+					<li><a href="#planned-and-requested-features">Planned and requested features</a></li>
+				</ul>
+			</li>
+		</ul>
+		<p><br />
+		<hr>
+		<br /></p>
+		<h3 id="mass-assigning-or-revoking-roles">Mass-assigning or revoking roles</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Command</th>
+					<th>Privilege required</th>
+					<th>Parameters</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>/roles mass assign</code><br /><code>/roles mass revoke</code></td>
+					<td><code>Manage Roles</code></td>
+					<td>1: The <code>@role</code> to be assigned or revoked<br />2: <code>True</code> or <code>False</code> to indicate if the bot should only<br /> go through the users in the current channel</td>
+				</tr>
+			</tbody>
+		</table>
+		<p><code>/roles mass assign @visitors False</code><br />Will assign the <code>@visitors</code> role to all users in the server.</p>
+		<p><code>/roles mass revoke @gamenight True</code><br />Revoke the <code>@gamenight</code> role from all the users in the current channel.</p>
+		<p><br />
+		<hr>
+		<br /></p>
+		<h3 id="sending-dms-to-users-by-the-bot">Sending DMs to users by the bot</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Command</th>
+					<th>Privilege required</th>
+					<th>Parameters</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>/senddm</code></td>
+					<td><code>Manage Messages</code></td>
+					<td>1: The <code>@user</code> to send the message to<br />2: The <code>color</code> of the embed showing the message<br />3: The <code>message</code> actual message to show to the user</td>
+				</tr>
+			</tbody>
+		</table>
+		<p><code>/senddm @randomuser Blue Thank you for helping us today!</code><br />Will send a message to <code>@randomuser</code> showing as followed:<br />
+			<br />
+			<img src="https://github.com/Master-Guy/TheDoctor/raw/main/senddm_example.png" alt="Example senddm">
+		</p>
+		<p><br />
+		<hr>
+		<br /></p>
+		<h3 id="adding-a-number-of-messages-to-a-channel">Adding a number of messages to a channel</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Command</th>
+					<th>Privilege required</th>
+					<th>Parameters</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>/messages add</code></td>
+					<td><code>Manage Messages</code></td>
+					<td>1: The <code>amount</code> of messages to send to the current channel</td>
+				</tr>
+			</tbody>
+		</table>
+		<p><code>/messages add 5</code><br />Will send 5 messages to the current channel.<br />
+			<br />
+			<img src="https://github.com/Master-Guy/TheDoctor/raw/main/messagesadd_example.png" alt="Example messages add 5">
+		</p>
+		<p><br />
+		<hr>
+		<br /></p>
+		<h3 id="removing-a-number-of-messages-from-a-channel">Removing a number of messages from a channel</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Command</th>
+					<th>Privilege required</th>
+					<th>Parameters</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>/messages remove</code></td>
+					<td><code>Manage Messages</code></td>
+					<td>1: The <code>amount</code> of messages to remove from the current channel</td>
+				</tr>
+			</tbody>
+		</table>
+		<p><code>/messages remove 5</code><br />Will remove 5 messages from the current channel, starting with the latest.</p>
+		<p><br />
+		<hr>
+		<br /></p>
+		<h3 id="removing-a-number-of-messages-by-a-specific-user">Removing a number of messages by a specific user</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Command</th>
+					<th>Privilege required</th>
+					<th>Parameters</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>/messages remove_by</code></td>
+					<td><code>Manage Messages</code></td>
+					<td>1: The <code>@user</code> who&#39;s messages to remove<br />2: The <code>amount</code> of messages to remove <br />3: <code>True</code> or <code>False</code> indicating to remove messages from all channels</td>
+				</tr>
+			</tbody>
+		</table>
+		<p><code>/messages remove_by @naughtyuser 5 False</code><br />Will remove the last 5 messages made by <code>@naughtyuser</code> in the current channel.</p>
+		<p><code>/messages remove_by @banneduser 5 True</code><br />Will remove the last 5 messages made by <code>@banneduser</code> in each channel of this server.</p>
+		<p><br />
+		<hr>
+		<br /></p>
+		<h3 id="ping-test-to-see-if-the-bot-is-working-properly">Ping/Test to see if the bot is working properly</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Command</th>
+					<th>Privilege required</th>
+					<th>Parameters</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><code>/ping</code><br /><code>/test</code></td>
+					<td>N/A<br /><code>Administrator</code></td>
+					<td>N/A<br />N/A</td>
+				</tr>
+			</tbody>
+		</table>
+		<p><code>/ping</code><br />
+			Will have the bot respond with <code>Pong!</code>
+		</p>
+		<p><code>/test</code><br />
+			Will have the bot respond with <code>Test OK!</code>
+		</p>
+		<p><br />
+		<hr>
+		<br /></p>
+		<h2 id="planned-and-requested-features">Planned and requested features</h2>
+		<p>Currently planned features are listed here, but feel free to suggest more.</p>
+		<ul>
+			<li>GitHub.com repository messages to report new or updated Pull Requests, Issues and Releases</li>
+			<li>RegEx moderation of messages</li>
+		</ul>
+	</body>
+</html>
