@@ -39,6 +39,10 @@
 			a {
 				color: #3391ff;
 			}
+
+			input[type="checkbox"] {
+				filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+			}
 		</style>
 	</head>
 	<body>
@@ -69,10 +73,10 @@
 				<ul>
 					<li><code>/ping</code> (<a href="#pingtest-to-see-if-the-bot-is-working-properly">#</a>)</li>
 				</ul>
-				Required permission:
+				Required permission:<br />
 				<input type="checkbox" name="useslashcommands" value="2147483648" id="useslashcommands" checked readonly /><label for="useslashcommands"><b>Use Slash Commands</b>, required to create and react to slash commands.</label><br />
 				<br />
-				Generic permissions, to improve the bot usability:
+				Generic permissions, to improve the bot usability:<br />
 				<input type="checkbox" name="changenickname" value="67108864" id="changenickname" checked /><label for="changenickname"><b>Change Nickname</b>, allows the bot to change it&quot;s own nickname.</label><br />
 				<input type="checkbox" name="viewchannels" value="1024" id="viewchannels" checked /><label for="viewchannels"><b>View Channels</b>, allows the bot see all the channels.</label><br />
 				<input type="checkbox" name="readmessagehistory" value="65536" id="readmessagehistory" checked /><label for="readmessagehistory"><b>Read message history</b>, helps if the bot has to reboot or update.</label><br />
