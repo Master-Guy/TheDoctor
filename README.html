@@ -1,11 +1,40 @@
 <html>
 	<head>
 		<title>TheDoctor ReadMe</title>
+		<script type="text/javascript">
+			function calculatePermissions() {
+
+			}
+		</script>
 	</head>
 	<body>
 		<h1 id="thedoctor">TheDoctor</h1>
 		<p>TheDoctor is in it&#39;s third iteration, now using DiscordJS v14 and build with slash commands.
-			This bot is hosted by me myself, but available to anyone that wants to use it&#39;s features.
+			This bot is hosted by me myself, but available to anyone that wants to use it&#39;s features for free.
+		</p>
+		<h2 id="permissions">Create invite link</h2>
+		<p>
+			<form>
+				To see what commands you can use in your server:
+				<ul>
+					<li><code>/help</code></li>
+				</ul>
+				<br />
+				Enable the checkmarks for the commands you want to use, to get an invite link that doesn&quot;t request more permissions than required.
+				<input type="checkbox" name="manageroles" value="" id="manageroles" /><label for="manageroles"><b>Manage Roles</b></label>
+				<ul>
+					<li><code>/roles</code> (<a href="#mass-assigning-or-revoking-roles">#</a>)</li>
+				</ul>
+				<input type="checkbox" name="managemessages" value="" id="managemessages" /><label for="managemessages"><b>Manage Messages</b></label>
+				<ul>
+					<li><code>/messages</code> (<a href="#adding-a-number-of-messages-to-a-channel">#</a>)</li>
+					<li><code>/senddm</code> (<a href="#sending-dms-to-users-by-the-bot">#</a>)</li>
+				</ul>
+				Always available:
+				<ul>
+					<li><code>/ping</code> (<a href="#pingtest-to-see-if-the-bot-is-working-properly">#</a>)</li>
+				</ul>
+			</form>
 		</p>
 		<p><a href="https://discord.com/oauth2/authorize?client_id=1010203035261210724&amp;permissions=277293903062&amp;scope=applications.commands%20bot">Click here to invite me to your server.</a></p>
 		<p>If you found any issues with the bot, please let me know by opening a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=bug">bug report</a>. Need more <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=documentation">documentation</a>? Or got a <a href="https://github.com/Master-Guy/TheDoctor/issues/new?labels=enhancement">suggestion</a>? Please don&#39;t hesitate to ask and let me know!</p>
