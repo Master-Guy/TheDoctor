@@ -98,3 +98,4 @@ Will have the bot respond with `Test OK!`
 Currently planned features are listed here, but feel free to suggest more.
 
 -   GitHub.com repository messages to report new or updated Pull Requests, Issues and Releases
+-   RegEx moderation of messages
